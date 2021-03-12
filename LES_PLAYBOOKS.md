@@ -137,7 +137,7 @@ Tapez la commande suivante:
 ```ansible-playbook -i inventory_children playbook.yml```
 
 ## Ansible Vault
-Nous allons voir comment crypter nos informations sensibles avec Ansible
+Nous allons voir commentcd  crypter nos informations sensibles avec Ansible
 Crypter la variable token dans votre projet example github.role/defaults/main.yml  
 Tapez  
 ```ansible-vault encrypt  main.yml```   
@@ -145,9 +145,9 @@ entrez votre mot de passe
 mettrez ce mot de passe dans un fichier  
 ```vi /home/<home_directory>/mysecret```   
 Vous pouvez executer le playbook avec dans example-role directory   
-```ansible-playbook -i inventory_children --vault-password-file /home/<home_directory>/mysecret playbook.yml``` 
+```ansible-playbook -i inventory_children --vault-password-file ~/mysecret playbook.yml``` 
 vous pouvez metter le path de ce fichier dans votre ```.bash_profile``` file.  
-```export  ANSIBLE_VAULT_PASSWORD_FILE=/home/<home>/mysecret```      
+```export  ANSIBLE_VAULT_PASSWORD_FILE=~/mysecret```      
 et vous entrez la commande sans vous soucier du fichier du mot de passe  
 ```ansible-playbook -i inventory_children playbook.yml``` 
 
